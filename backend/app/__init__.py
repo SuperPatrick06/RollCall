@@ -1,0 +1,1 @@
+"""Attendance assistant backend package."""
