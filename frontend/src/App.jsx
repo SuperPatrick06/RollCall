@@ -254,41 +254,54 @@ function LoginScreen({ onLogin, notify }) {
   return (
     <main className="login-screen">
       <div className="login-brand">
-        <img className="login-emblem" src="/assets/logo.svg" alt="RollCall Logo" />
-        <div className="login-brand-copy">
-          <strong>RollCall</strong>
-          <span>ATTENDANCE · HOURS · ANALYTICS</span>
+        <div className="login-brand-inner">
+          <div className="login-brand-head">
+            <img className="login-mark" src="/assets/logo.svg" alt="" />
+            <div className="login-brand-copy">
+              <strong>RollCall</strong>
+              <span>GENERIC ATTENDANCE SYSTEM</span>
+            </div>
+          </div>
+          <img className="login-art" src="/assets/login-art.svg" alt="RollCall 产品界面预览" />
+          <ul className="login-highlights">
+            <li><Check size={15} />签到 · 时长排行 · 考核 · 违规扣时</li>
+            <li><Check size={15} />出勤分析 · CSV 报表 · 邮件月报</li>
+            <li><Check size={15} />自托管部署 · 数据完全自持</li>
+          </ul>
         </div>
       </div>
       <section className="login-panel">
-        <div className="login-title">
-          <span className="brand-kicker">GENERIC ATTENDANCE SYSTEM</span>
-          <h1>通用考勤系统</h1>
-          <p>{todayLabel()}</p>
-        </div>
-        <form onSubmit={submit}>
-          <label htmlFor="password">访问密码</label>
-          <div className="password-input">
-            <KeyRound size={18} />
-            <input
-              id="password"
-              type={visible ? 'text' : 'password'}
-              value={password}
-              onChange={(event) => setPassword(event.target.value)}
-              placeholder="请输入密码"
-              autoFocus
-              required
-            />
-            <IconButton label={visible ? '隐藏密码' : '显示密码'} type="button" onClick={() => setVisible(!visible)}>
-              {visible ? <EyeOff size={18} /> : <Eye size={18} />}
-            </IconButton>
+        <div className="login-panel-inner">
+          <span className="brand-kicker">WELCOME BACK</span>
+          <div className="login-title">
+            <h1>通用考勤系统</h1>
+            <p className="login-sub">输入访问密码，开始管理今天的出勤</p>
           </div>
-          <button className="primary-button login-button" disabled={busy}>
-            {busy ? <LoaderCircle className="spin" size={18} /> : <ShieldCheck size={18} />}
-            进入系统
-          </button>
-        </form>
-        <span className="login-footnote">MIT 开源 · 自托管部署 · 适用于社团 / 团队 / 组织</span>
+          <p className="login-date">{todayLabel()}</p>
+          <form onSubmit={submit}>
+            <label htmlFor="password">访问密码</label>
+            <div className="password-input">
+              <KeyRound size={18} />
+              <input
+                id="password"
+                type={visible ? 'text' : 'password'}
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+                placeholder="请输入密码"
+                autoFocus
+                required
+              />
+              <IconButton label={visible ? '隐藏密码' : '显示密码'} type="button" onClick={() => setVisible(!visible)}>
+                {visible ? <EyeOff size={18} /> : <Eye size={18} />}
+              </IconButton>
+            </div>
+            <button className="primary-button login-button" disabled={busy}>
+              {busy ? <LoaderCircle className="spin" size={18} /> : <ShieldCheck size={18} />}
+              进入系统
+            </button>
+          </form>
+          <span className="login-footnote"><ShieldCheck size={13} />MIT 开源 · 自托管部署 · 数据保存在你自己的服务器</span>
+        </div>
       </section>
     </main>
   )

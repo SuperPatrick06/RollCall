@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 600">
+  <defs>
+    <linearGradient id="win" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#f6faf7" />
+    </linearGradient>
+    <linearGradient id="emerald" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17a97a" />
+      <stop offset="1" stop-color="#0e7a55" />
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#7fd6a8" stop-opacity="0.35" />
+      <stop offset="1" stop-color="#7fd6a8" stop-opacity="0" />
+    </radialGradient>
+    <filter id="s1" x="-25%" y="-25%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="22" stdDeviation="26" flood-color="#04140e" flood-opacity="0.42" />
+    </filter>
+    <filter id="s2" x="-40%" y="-40%" width="180%" height="190%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#04140e" flood-opacity="0.35" />
+    </filter>
+    <clipPath id="winclip">
+      <rect x="70" y="60" width="580" height="420" rx="22" />
+    </clipPath>
+    <clipPath id="sideclip">
+      <rect x="70" y="60" width="130" height="420" />
+    </clipPath>
+  </defs>
+
+  <ellipse cx="360" cy="290" rx="360" ry="280" fill="url(#halo)" />
+
+  <!-- ===== main app window ===== -->
+  <g filter="url(#s1)">
+    <rect x="70" y="60" width="580" height="420" rx="22" fill="url(#win)" />
+  </g>
+  <g clip-path="url(#winclip)">
+    <!-- title bar -->
+    <rect x="70" y="60" width="580" height="46" fill="#f1f5f0" />
+    <circle cx="98" cy="83" r="5" fill="#c5d4cb" />
+    <circle cx="116" cy="83" r="5" fill="#c5d4cb" />
+    <circle cx="134" cy="83" r="5" fill="#c5d4cb" />
+    <rect x="180" y="73" width="180" height="20" rx="10" fill="#e3ebe4" />
+
+    <!-- sidebar -->
+    <rect x="70" y="106" width="130" height="374" fill="#f4f7f2" />
+    <g clip-path="url(#sideclip)">
+      <rect x="88" y="126" width="30" height="30" rx="9" fill="url(#emerald)" />
+      <rect x="126" y="132" width="56" height="9" rx="4.5" fill="#1c342a" opacity="0.85" />
+      <rect x="126" y="147" width="40" height="7" rx="3.5" fill="#8aa294" />
+      <rect x="84" y="182" width="102" height="32" rx="10" fill="url(#emerald)" />
+      <rect x="98" y="194" width="56" height="8" rx="4" fill="#ffffff" opacity="0.9" />
+      <rect x="98" y="232" width="56" height="8" rx="4" fill="#b9c9bf" />
+      <rect x="98" y="266" width="56" height="8" rx="4" fill="#b9c9bf" />
+      <rect x="98" y="300" width="56" height="8" rx="4" fill="#b9c9bf" />
+      <rect x="98" y="334" width="56" height="8" rx="4" fill="#b9c9bf" />
+    </g>
+
+    <!-- stat cards -->
+    <rect x="224" y="128" width="128" height="76" rx="12" fill="#ffffff" stroke="#e4ebe5" />
+    <circle cx="248" cy="152" r="11" fill="#e2f3ea" />
+    <rect x="266" y="147" width="52" height="7" rx="3.5" fill="#c6d4cb" />
+    <rect x="240" y="172" width="58" height="14" rx="4" fill="#1c342a" opacity="0.8" />
+
+    <rect x="364" y="128" width="128" height="76" rx="12" fill="#ffffff" stroke="#e4ebe5" />
+    <circle cx="388" cy="152" r="11" fill="#e8eef4" />
+    <rect x="406" y="147" width="52" height="7" rx="3.5" fill="#c6d4cb" />
+    <rect x="380" y="172" width="58" height="14" rx="4" fill="#1c342a" opacity="0.8" />
+
+    <rect x="504" y="128" width="128" height="76" rx="12" fill="#ffffff" stroke="#e4ebe5" />
+    <circle cx="528" cy="152" r="11" fill="#f6ead2" />
+    <rect x="546" y="147" width="52" height="7" rx="3.5" fill="#c6d4cb" />
+    <rect x="520" y="172" width="58" height="14" rx="4" fill="#1c342a" opacity="0.8" />
+
+    <!-- chart card -->
+    <rect x="224" y="222" width="268" height="238" rx="12" fill="#ffffff" stroke="#e4ebe5" />
+    <rect x="244" y="242" width="92" height="9" rx="4.5" fill="#1c342a" opacity="0.8" />
+    <rect x="244" y="258" width="58" height="7" rx="3.5" fill="#c6d4cb" />
+    <rect x="252" y="388" width="26" height="48" rx="7" fill="#d8ece1" />
+    <rect x="292" y="352" width="26" height="84" rx="7" fill="url(#emerald)" />
+    <rect x="332" y="370" width="26" height="66" rx="7" fill="#d8ece1" />
+    <rect x="372" y="322" width="26" height="114" rx="7" fill="url(#emerald)" />
+    <rect x="412" y="398" width="26" height="38" rx="7" fill="#d8ece1" />
+    <rect x="452" y="340" width="26" height="96" rx="7" fill="url(#emerald)" />
+
+    <!-- list card -->
+    <rect x="504" y="222" width="128" height="238" rx="12" fill="#ffffff" stroke="#e4ebe5" />
+    <rect x="520" y="242" width="72" height="9" rx="4.5" fill="#1c342a" opacity="0.8" />
+    <circle cx="534" cy="284" r="11" fill="#e2f3ea" />
+    <rect x="552" y="277" width="60" height="7" rx="3.5" fill="#c6d4cb" />
+    <rect x="552" y="290" width="40" height="6" rx="3" fill="#dfe7e1" />
+    <circle cx="534" cy="326" r="11" fill="#e8eef4" />
+    <rect x="552" y="319" width="60" height="7" rx="3.5" fill="#c6d4cb" />
+    <rect x="552" y="332" width="40" height="6" rx="3" fill="#dfe7e1" />
+    <circle cx="534" cy="368" r="11" fill="#f6ead2" />
+    <rect x="552" y="361" width="60" height="7" rx="3.5" fill="#c6d4cb" />
+    <rect x="552" y="374" width="40" height="6" rx="3" fill="#dfe7e1" />
+    <circle cx="534" cy="410" r="11" fill="#e2f3ea" />
+    <rect x="552" y="403" width="60" height="7" rx="3.5" fill="#c6d4cb" />
+    <rect x="552" y="416" width="40" height="6" rx="3" fill="#dfe7e1" />
+  </g>
+
+  <!-- floating stat chip -->
+  <g filter="url(#s2)">
+    <rect x="30" y="392" width="188" height="86" rx="18" fill="#0e2e23" stroke="#2b5c47" />
+  </g>
+  <circle cx="66" cy="426" r="16" fill="url(#emerald)" />
+  <path d="M59 426 L64.5 431.5 L74 421" fill="none" stroke="#ffffff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="92" y="412" width="64" height="9" rx="4.5" fill="#8fe3b9" />
+  <rect x="92" y="429" width="98" height="12" rx="4" fill="#ffffff" opacity="0.85" />
+  <rect x="92" y="450" width="72" height="7" rx="3.5" fill="#7c9c8c" />
+
+  <!-- floating verified badge -->
+  <g transform="translate(636,108)" filter="url(#s2)">
+    <circle r="34" fill="url(#emerald)" />
+    <path d="M-13 1 L-4 10 L14 -9" fill="none" stroke="#ffffff" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

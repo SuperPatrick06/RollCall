@@ -34,6 +34,10 @@ An open-source attendance system for clubs, student organizations, volunteer cor
 > [!NOTE]
 > RollCall organizes everything around **hours attended**: log each session per person, auto-accumulate totals and rankings, measure attendance rate against a monthly plan, then layer on assessment scores, violation deductions, CSV reports and monthly email digests — one system for all your attendance chores.
 
+<p align="center">
+<b>🎯 Perfect for</b>&nbsp; student orgs &nbsp;·&nbsp; clubs &nbsp;·&nbsp; volunteer corps &nbsp;·&nbsp; sports teams &nbsp;·&nbsp; hobby groups &nbsp;·&nbsp; small teams
+</p>
+
 <br>
 
 <div align="center">

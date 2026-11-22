@@ -34,6 +34,10 @@
 > [!NOTE]
 > RollCall 围绕**出勤时长**组织数据：逐人登记每次活动的时长，自动累计与排行，结合月度计划计算出勤率，再叠加考核成绩、违规扣时、CSV 报表与邮件月报——一个系统管完所有考勤事务。
 
+<p align="center">
+<b>🎯 完美适用于</b>&nbsp; 学生组织 &nbsp;·&nbsp; 社团 &nbsp;·&nbsp; 志愿队 &nbsp;·&nbsp; 运动队 &nbsp;·&nbsp; 兴趣小组 &nbsp;·&nbsp; 小型团队
+</p>
+
 <br>
 
 <div align="center">

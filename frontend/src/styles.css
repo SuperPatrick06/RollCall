@@ -12,10 +12,10 @@
   --ink: #16241e;
   --ink-soft: #3a4a42;
   --muted: #6b7b73;
-  --line: #e6eae8;
-  --line-strong: #d5ded9;
+  --line: #e8ece5;
+  --line-strong: #dae2d7;
   --surface: #ffffff;
-  --surface-soft: #f5f8f6;
+  --surface-soft: #f2f5ef;
   --green: #12805c;
   --green-dark: #0d6247;
   --green-pale: #e8f4ee;
@@ -54,8 +54,9 @@ body,
 body {
   min-height: 100vh;
   background:
-    radial-gradient(1100px 480px at 85% -8%, rgba(18, 128, 92, 0.05), transparent 62%),
-    #f5f8f6;
+    radial-gradient(900px 420px at 88% -10%, rgba(18, 128, 92, 0.07), transparent 60%),
+    radial-gradient(700px 380px at -8% 110%, rgba(214, 186, 120, 0.08), transparent 55%),
+    #fafbf8;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -165,14 +166,14 @@ input[type="month"] {
 .primary-button {
   padding: 0 18px;
   color: #fff;
-  background: var(--green);
-  border-color: var(--green);
+  background: linear-gradient(180deg, #15936b, #0e7a55);
+  border-color: #0e7a55;
   box-shadow: 0 1px 2px rgba(13, 98, 71, 0.28), 0 5px 14px rgba(18, 128, 92, 0.18);
 }
 
 .primary-button:hover:not(:disabled) {
-  background: var(--green-dark);
-  border-color: var(--green-dark);
+  background: linear-gradient(180deg, #12805c, #0b5e41);
+  border-color: #0b5e41;
   box-shadow: 0 1px 2px rgba(13, 98, 71, 0.30), 0 7px 18px rgba(13, 98, 71, 0.22);
 }
 
@@ -221,52 +222,75 @@ input[type="month"] {
 .login-screen {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: minmax(420px, 1.06fr) minmax(420px, 0.74fr);
+  grid-template-columns: minmax(480px, 1.1fr) minmax(420px, 0.9fr);
   background: #ffffff;
 }
 
 .login-brand {
   position: relative;
-  min-height: 600px;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 28px;
+  padding: 48px;
   overflow: hidden;
   background:
-    radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1.6px) 0 0 / 26px 26px,
-    radial-gradient(760px 420px at 78% 22%, rgba(127, 214, 168, 0.20), transparent 66%),
-    linear-gradient(135deg, #0b1d18 0%, #164036 55%, #2e7457 100%);
-  border-right: 1px solid rgba(255, 255, 255, 0.10);
+    radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1.6px) 0 0 / 26px 26px,
+    radial-gradient(820px 520px at 78% 18%, rgba(127, 214, 168, 0.22), transparent 66%),
+    linear-gradient(140deg, #0a1f18 0%, #12392d 52%, #23604a 100%);
 }
 
-.login-brand::before {
-  content: "";
-  position: absolute;
-  inset: auto 12% 12% auto;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.login-emblem {
+.login-brand-inner {
   position: relative;
   z-index: 1;
-  width: min(32vw, 216px);
-  max-width: 44%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 7px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 18px 48px rgba(4, 18, 14, 0.35);
+  width: min(580px, 100%);
+  display: grid;
+  gap: 32px;
+  justify-items: start;
+}
+
+.login-brand-head {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.login-mark {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  box-shadow: 0 10px 26px rgba(2, 16, 11, 0.35);
+}
+
+.login-art {
+  width: 100%;
+  height: auto;
+}
+
+.login-highlights {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin: 0;
+  padding: 0;
+}
+
+.login-highlights li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #c9e6d8;
+  font-size: 0.82rem;
+  font-weight: 560;
+}
+
+.login-highlights svg {
+  color: #7fd6a8;
 }
 
 .login-brand-copy {
-  position: relative;
-  z-index: 1;
-  text-align: center;
+  min-width: 0;
 }
 
 .login-brand-copy strong,
@@ -275,28 +299,34 @@ input[type="month"] {
 }
 
 .login-brand-copy strong {
-  color: #f7fbfa;
-  font-size: 1.05rem;
-  font-weight: 700;
+  color: #f4faf7;
+  font-size: 1.18rem;
+  font-weight: 760;
   letter-spacing: 0.01em;
 }
 
 .login-brand-copy span {
-  margin-top: 7px;
-  color: #8fa79d;
-  font-size: 0.64rem;
+  margin-top: 4px;
+  color: #8fc7ae;
+  font-size: 0.6rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
 }
 
 .login-panel {
-  width: min(400px, calc(100% - 72px));
-  margin: auto;
-  padding: 48px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  background: #ffffff;
+}
+
+.login-panel-inner {
+  width: min(380px, 100%);
 }
 
 .login-title {
-  margin-bottom: 36px;
+  margin: 14px 0 0;
 }
 
 .brand-kicker,
@@ -309,18 +339,32 @@ input[type="month"] {
 }
 
 .login-title h1 {
-  margin: 12px 0 12px;
+  margin: 12px 0 10px;
   color: var(--ink);
-  font-size: clamp(2.2rem, 4vw, 3.25rem);
-  line-height: 1.08;
+  font-size: clamp(2rem, 3.4vw, 2.7rem);
+  line-height: 1.12;
   letter-spacing: -0.01em;
-  font-weight: 780;
+  font-weight: 800;
 }
 
-.login-title p {
+.login-sub {
   margin: 0;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
+}
+
+.login-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0 28px;
+  padding: 7px 14px;
+  color: var(--green-dark);
+  background: var(--green-pale);
+  border: 1px solid #cfe6da;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 650;
 }
 
 .login-panel form > label {
@@ -367,17 +411,20 @@ input[type="month"] {
 
 .login-button {
   width: 100%;
-  min-height: 50px;
+  min-height: 52px;
   margin-top: 18px;
   border-radius: 12px;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
 }
 
 .login-footnote {
-  display: block;
-  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 28px;
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   text-align: center;
 }
 
@@ -386,8 +433,9 @@ input[type="month"] {
 .app-shell {
   min-height: 100vh;
   background:
-    radial-gradient(1100px 480px at 85% -8%, rgba(18, 128, 92, 0.05), transparent 62%),
-    #f5f8f6;
+    radial-gradient(900px 420px at 88% -10%, rgba(18, 128, 92, 0.07), transparent 60%),
+    radial-gradient(700px 380px at -8% 110%, rgba(214, 186, 120, 0.08), transparent 55%),
+    #fafbf8;
 }
 
 .sidebar {
@@ -598,10 +646,10 @@ input[type="month"] {
 .page-heading h1 {
   margin: 8px 0 0;
   color: var(--ink);
-  font-size: 1.75rem;
-  font-weight: 780;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
 }
 
 .page-heading .eyebrow {
@@ -658,10 +706,10 @@ input[type="month"] {
 .daily-summary strong {
   margin-top: 20px;
   color: var(--ink);
-  font-size: 1.72rem;
-  font-weight: 780;
+  font-size: 2rem;
+  font-weight: 800;
   line-height: 1;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   font-variant-numeric: tabular-nums;
 }
 
@@ -1743,33 +1791,24 @@ input[type="month"] {
   }
 
   .login-brand {
-    min-height: 300px;
-    gap: 20px;
+    min-height: 0;
+    padding: 34px 24px;
     border-right: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
 
-  .login-emblem {
-    width: 190px;
-    max-width: 42%;
-    border-width: 6px;
-  }
-
-  .login-brand-copy strong {
-    font-size: 0.92rem;
-  }
-
-  .login-brand-copy span {
-    font-size: 0.56rem;
+  .login-brand-inner {
+    gap: 22px;
+    width: min(520px, 100%);
+    margin: 0 auto;
   }
 
   .login-panel {
-    width: min(420px, calc(100% - 40px));
-    padding: 42px 0;
+    padding: 42px 24px;
   }
 
   .login-title {
-    margin-bottom: 28px;
+    margin-top: 10px;
   }
 
   .sidebar {
@@ -2209,23 +2248,24 @@ input[type="month"] {
 
 @media (max-width: 430px) {
   .login-brand {
-    min-height: 260px;
-    gap: 15px;
+    padding: 26px 18px;
   }
 
-  .login-emblem {
-    width: 150px;
-    max-width: 44%;
-    border-width: 5px;
+  .login-brand-inner {
+    gap: 16px;
+  }
+
+  .login-highlights {
+    display: none;
   }
 
   .login-brand-copy strong {
-    font-size: 0.82rem;
+    font-size: 0.95rem;
   }
 
   .login-brand-copy span {
-    margin-top: 5px;
-    font-size: 0.5rem;
+    margin-top: 3px;
+    font-size: 0.52rem;
   }
 
   .topbar > div span {
