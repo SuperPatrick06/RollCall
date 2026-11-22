@@ -57,10 +57,10 @@ An open-source attendance system for clubs, student organizations, volunteer cor
 
 <table>
 <tr>
-<td align="center" width="25%"><b>🧩 Zero setup</b><br><sub>One-click start scripts and local SQLite<br>no database server required</sub></td>
-<td align="center" width="25%"><b>🕒 Hours-first</b><br><sub>Modeled around attended hours<br>accumulate / deduct / rank / rate</sub></td>
-<td align="center" width="25%"><b>🔒 Your data</b><br><sub>Self-hosted, data stays with you<br>works on intranets too</sub></td>
-<td align="center" width="25%"><b>📱 Responsive</b><br><sub>Desktop / tablet / mobile layouts<br>use it straight from a phone browser</sub></td>
+<td align="center" width="25%" valign="top"><b>🧩 Zero setup</b><br><sub>One-click start<br>No database server</sub></td>
+<td align="center" width="25%" valign="top"><b>🕒 Hours-first</b><br><sub>Credit / deduct / rank<br>Auto attendance rate</sub></td>
+<td align="center" width="25%" valign="top"><b>🔒 Your data</b><br><sub>Self-hosted<br>Works on intranets</sub></td>
+<td align="center" width="25%" valign="top"><b>📱 Responsive</b><br><sub>Desktop / tablet / mobile<br>Any mobile browser</sub></td>
 </tr>
 </table>
 

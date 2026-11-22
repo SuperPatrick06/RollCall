@@ -57,10 +57,10 @@
 
 <table>
 <tr>
-<td align="center" width="25%"><b>🧩 开箱即用</b><br><sub>一键启动脚本，SQLite 本地存储<br>无需安装数据库服务</sub></td>
-<td align="center" width="25%"><b>🕒 时长导向</b><br><sub>围绕出勤时长建模<br>累计 / 扣除 / 排行 / 出勤率一体</sub></td>
-<td align="center" width="25%"><b>🔒 数据自持</b><br><sub>自托管部署，数据留在自己手里<br>内网环境也能跑</sub></td>
-<td align="center" width="25%"><b>📱 多端适配</b><br><sub>桌面 / 平板 / 手机自适应<br>手机浏览器直接使用</sub></td>
+<td align="center" width="25%" valign="top"><b>🧩 开箱即用</b><br><sub>一键启动脚本<br>无需安装数据库</sub></td>
+<td align="center" width="25%" valign="top"><b>🕒 时长导向</b><br><sub>累计 / 扣除 / 排行<br>出勤率自动计算</sub></td>
+<td align="center" width="25%" valign="top"><b>🔒 数据自持</b><br><sub>自托管部署<br>数据留在自己手里</sub></td>
+<td align="center" width="25%" valign="top"><b>📱 多端适配</b><br><sub>桌面 / 平板 / 手机<br>浏览器直接使用</sub></td>
 </tr>
 </table>
 
