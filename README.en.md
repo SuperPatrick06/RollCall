@@ -71,7 +71,7 @@ An open-source attendance system for clubs, student organizations, volunteer cor
 
 <br>
 
-| | Paper / Excel | Cloud attendance SaaS | **RollCall** |
+| | Paper / Excel | Cloud attendance SaaS | **✅ RollCall** |
 |:---|:---:|:---:|:---:|
 | Cost | Free | Per user / month | ✅ Free & open source |
 | Hosting | — | Vendor-bound | ✅ Self-hosted / intranet |
@@ -107,7 +107,9 @@ An open-source attendance system for clubs, student organizations, volunteer cor
 
 ## 📸 Screenshots
 
-**📋 Attendance** — log hours per person with a live daily summary
+#### 📋 Attendance
+
+Log hours per person with a live daily summary.
 
 <p align="center">
   <img src="docs/images/attendance-desktop.png" alt="Attendance page: log hours per person with a live daily summary" width="920">
@@ -120,7 +122,9 @@ An open-source attendance system for clubs, student organizations, volunteer cor
 </tr>
 </table>
 
-**📊 Analytics** — monthly attendance rate and scores with CSV export
+#### 📊 Analytics
+
+Monthly attendance rate and scores with CSV export.
 
 <p align="center">
   <img src="docs/images/analytics-desktop.png" alt="Analytics page: monthly attendance rate and scores" width="920">
@@ -276,9 +280,9 @@ flowchart LR
 
 | Layer | Tech |
 |:---|:---|
-| Frontend | React + Vite + Lucide Icons |
-| Backend | FastAPI + Uvicorn |
-| Database | SQLite (local file, WAL mode) |
+| Frontend | ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) Lucide Icons |
+| Backend | ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) Uvicorn |
+| Database | ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white) local file (WAL mode) |
 | Auth | PBKDF2-SHA256 + session tokens |
 
 Production deployment (Nginx + systemd + backups + HTTPS): **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)** (Chinese).

@@ -71,7 +71,7 @@
 
 <br>
 
-| | 纸质 / Excel 签到 | 云端考勤 SaaS | **RollCall** |
+| | 纸质 / Excel 签到 | 云端考勤 SaaS | **✅ RollCall** |
 |:---|:---:|:---:|:---:|
 | 费用 | 免费 | 按人 / 月付费 | ✅ 免费开源 |
 | 部署方式 | — | 依赖厂商 | ✅ 自托管 / 内网 |
@@ -107,7 +107,9 @@
 
 ## 📸 界面预览
 
-**📋 出勤签到** — 逐人登记每日出勤时长，实时统计当日签到人数、累计出勤时长、扣除时长
+#### 📋 出勤签到
+
+逐人登记每日出勤时长，实时统计当日签到人数、累计出勤时长、扣除时长。
 
 <p align="center">
   <img src="docs/images/attendance-desktop.png" alt="出勤签到页面：逐人登记出勤时长与当日统计" width="920">
@@ -120,7 +122,9 @@
 </tr>
 </table>
 
-**📊 出勤分析** — 按月统计出勤率与考核分数，支持导出 CSV
+#### 📊 出勤分析
+
+按月统计出勤率与考核分数，支持导出 CSV。
 
 <p align="center">
   <img src="docs/images/analytics-desktop.png" alt="出勤分析页面：按月统计出勤率与考核分数" width="920">
@@ -283,9 +287,9 @@ flowchart LR
 
 | 层级 | 技术 |
 |:---|:---|
-| 前端 | React + Vite + Lucide Icons |
-| 后端 | FastAPI + Uvicorn |
-| 数据库 | SQLite（本地文件，WAL 模式） |
+| 前端 | ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) Lucide Icons |
+| 后端 | ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) Uvicorn |
+| 数据库 | ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white) 本地文件（WAL 模式） |
 | 认证 | PBKDF2-SHA256 + 会话 Token |
 
 生产部署（Nginx + systemd + 备份 + HTTPS）见 **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)**。
