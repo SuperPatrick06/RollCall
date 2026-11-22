@@ -20,6 +20,11 @@
 ![License](https://img.shields.io/badge/License-MIT-2ea44f?style=flat-square)
 ![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)
 
+![Stars](https://img.shields.io/github/stars/SuperPatrick06/RollCall?style=flat-square&logo=github&color=2ea44f)
+![Forks](https://img.shields.io/github/forks/SuperPatrick06/RollCall?style=flat-square&logo=github&color=2ea44f)
+![Issues](https://img.shields.io/github/issues/SuperPatrick06/RollCall?style=flat-square&logo=github&color=2ea44f)
+![Last commit](https://img.shields.io/github/last-commit/SuperPatrick06/RollCall?style=flat-square&logo=github&color=2ea44f)
+
 **简体中文** · [English](README.en.md)
 
 </div>
@@ -334,6 +339,18 @@ sqlite3 backend/data/attendance.db ".backup backup-$(date +%F).db"
 
 ---
 
+## ⭐ Star History
+
+<p align="center">
+  <a href="https://star-history.com/#SuperPatrick06/RollCall&Date">
+    <img src="https://star-history.com/svg?repos=SuperPatrick06/RollCall&type=Date" alt="RollCall Star History chart" width="640">
+  </a>
+</p>
+
+如果 RollCall 对你有帮助，欢迎点一个 ⭐ Star，让它被更多人看到！
+
+---
+
 ## ❓ 常见问题
 
 <details>
@@ -394,6 +411,12 @@ cd frontend && npm run visual-check   # 视觉检查（生成截图）
 <div align="center">
 
 **如果这个项目对你有帮助，欢迎 ⭐ Star 支持一下**
+
+<br>
+
+<sub>📖 <a href="README.en.md">English Docs</a> &nbsp;·&nbsp; 🚀 <a href="docs/DEPLOYMENT.md">部署指南</a> &nbsp;·&nbsp; 📄 <a href="LICENSE">MIT License</a></sub>
+
+<br><br>
 
 <a href="#readme-top">回到顶部 ⬆</a>
 

@@ -20,6 +20,11 @@ An open-source attendance system for clubs, student organizations, volunteer cor
 ![License](https://img.shields.io/badge/License-MIT-2ea44f?style=flat-square)
 ![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)
 
+![Stars](https://img.shields.io/github/stars/SuperPatrick06/RollCall?style=flat-square&logo=github&color=2ea44f)
+![Forks](https://img.shields.io/github/forks/SuperPatrick06/RollCall?style=flat-square&logo=github&color=2ea44f)
+![Issues](https://img.shields.io/github/issues/SuperPatrick06/RollCall?style=flat-square&logo=github&color=2ea44f)
+![Last commit](https://img.shields.io/github/last-commit/SuperPatrick06/RollCall?style=flat-square&logo=github&color=2ea44f)
+
 [简体中文](README.md) · **English**
 
 </div>
@@ -325,6 +330,18 @@ Feature requests welcome in the Issues.
 
 ---
 
+## ⭐ Star History
+
+<p align="center">
+  <a href="https://star-history.com/#SuperPatrick06/RollCall&Date">
+    <img src="https://star-history.com/svg?repos=SuperPatrick06/RollCall&type=Date" alt="RollCall Star History chart" width="640">
+  </a>
+</p>
+
+If RollCall helps you, please give it a ⭐ Star so more people can find it!
+
+---
+
 ## ❓ FAQ
 
 <details>
@@ -385,6 +402,12 @@ Released under the [MIT License](LICENSE).
 <div align="center">
 
 **If this project helps you, please give it a ⭐ Star**
+
+<br>
+
+<sub>📖 <a href="README.md">中文文档</a> &nbsp;·&nbsp; 🚀 <a href="docs/DEPLOYMENT.md">Deployment Guide</a> &nbsp;·&nbsp; 📄 <a href="LICENSE">MIT License</a></sub>
+
+<br><br>
 
 <a href="#readme-top">Back to top ⬆</a>
 

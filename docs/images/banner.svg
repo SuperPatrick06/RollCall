@@ -1,39 +1,95 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#122b24" />
-      <stop offset="0.55" stop-color="#1e5747" />
-      <stop offset="1" stop-color="#2f7a5d" />
+      <stop offset="0" stop-color="#0b1d18" />
+      <stop offset="0.55" stop-color="#164036" />
+      <stop offset="1" stop-color="#2e7457" />
     </linearGradient>
-    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22" />
-      <stop offset="1" stop-color="#ffffff" stop-opacity="0.08" />
+    <radialGradient id="glow" cx="0.72" cy="0.3" r="0.65">
+      <stop offset="0" stop-color="#7fd6a8" stop-opacity="0.30" />
+      <stop offset="1" stop-color="#7fd6a8" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.7" fill="#ffffff" opacity="0.06" />
+    </pattern>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.30" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.12" />
     </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8fe0b8" />
+      <stop offset="1" stop-color="#3fa577" />
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="170%" height="170%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#04120e" flood-opacity="0.5" />
+    </filter>
+    <filter id="soft" x="-60%" y="-60%" width="240%" height="240%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#04120e" flood-opacity="0.45" />
+    </filter>
+    <clipPath id="win">
+      <rect x="700" y="64" width="424" height="272" rx="18" />
+    </clipPath>
   </defs>
 
-  <rect width="1200" height="300" fill="url(#bg)" />
+  <rect width="1200" height="400" fill="url(#bg)" />
+  <rect width="1200" height="400" fill="url(#dots)" />
+  <rect width="1200" height="400" fill="url(#glow)" />
 
-  <!-- decorative motif: roll-call ring + check -->
-  <g stroke="#7fd6a8" fill="none" opacity="0.20">
-    <circle cx="1010" cy="150" r="118" stroke-width="26" />
-    <circle cx="1010" cy="150" r="60" stroke-width="14" />
-    <path d="M972 152 l26 26 50 -58" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- ===== brand block ===== -->
+  <g transform="translate(88,132)">
+    <rect width="96" height="96" rx="26" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.28" />
+    <circle cx="48" cy="48" r="25" fill="none" stroke="#ffffff" stroke-width="5.5" />
+    <path d="M36 49 L44.5 57.5 L61 39.5" fill="none" stroke="#ffffff" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="48" cy="22" r="4.5" fill="#7fd6a8" />
   </g>
-  <g stroke="#ffffff" fill="none" opacity="0.10" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M698 66 l13 13 24 -28" />
-    <path d="M760 236 l13 13 24 -28" />
-    <path d="M862 66 l13 13 24 -28" />
+  <text x="212" y="200" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="74" font-weight="700" fill="#ffffff">RollCall</text>
+  <text x="215" y="243" font-family="'Segoe UI','Microsoft YaHei','PingFang SC',sans-serif" font-size="23" fill="#cfe7db">通用考勤与出勤时长管理系统</text>
+  <text x="216" y="278" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13.5" letter-spacing="5.2" fill="#8fc7ae">GENERIC ATTENDANCE &amp; HOURS TRACKING</text>
+
+  <!-- ===== product window mockup ===== -->
+  <g filter="url(#shadow)">
+    <rect x="700" y="64" width="424" height="272" rx="18" fill="#f7fbf9" />
+  </g>
+  <g clip-path="url(#win)">
+    <!-- title bar -->
+    <rect x="700" y="64" width="424" height="42" fill="#e9f1ed" />
+    <circle cx="726" cy="85" r="5" fill="#c6d3cd" />
+    <circle cx="744" cy="85" r="5" fill="#c6d3cd" />
+    <circle cx="762" cy="85" r="5" fill="#c6d3cd" />
+    <rect x="806" y="76" width="150" height="18" rx="9" fill="#d5e2dc" />
+    <!-- sidebar -->
+    <rect x="700" y="106" width="96" height="230" fill="#1b322c" />
+    <rect x="720" y="132" width="56" height="10" rx="5" fill="#7fd6a8" opacity="0.85" />
+    <rect x="720" y="164" width="56" height="10" rx="5" fill="#ffffff" opacity="0.22" />
+    <rect x="720" y="196" width="56" height="10" rx="5" fill="#ffffff" opacity="0.22" />
+    <rect x="720" y="228" width="56" height="10" rx="5" fill="#ffffff" opacity="0.22" />
+    <!-- rows -->
+    <circle cx="836" cy="144" r="15" fill="#d3e3db" />
+    <rect x="864" y="134" width="112" height="10" rx="5" fill="#cfe0d8" />
+    <rect x="864" y="152" width="72" height="8" rx="4" fill="#e2ece7" />
+    <rect x="1032" y="136" width="58" height="22" rx="11" fill="#2f7a5d" opacity="0.16" />
+    <rect x="1046" y="143" width="30" height="8" rx="4" fill="#2f7a5d" opacity="0.7" />
+
+    <circle cx="836" cy="200" r="15" fill="#d3e3db" />
+    <rect x="864" y="190" width="112" height="10" rx="5" fill="#cfe0d8" />
+    <rect x="864" y="208" width="72" height="8" rx="4" fill="#e2ece7" />
+    <rect x="1032" y="192" width="58" height="22" rx="11" fill="#2f7a5d" opacity="0.16" />
+    <rect x="1046" y="199" width="30" height="8" rx="4" fill="#2f7a5d" opacity="0.7" />
+
+    <circle cx="836" cy="256" r="15" fill="#d3e3db" />
+    <rect x="864" y="246" width="112" height="10" rx="5" fill="#cfe0d8" />
+    <rect x="864" y="264" width="72" height="8" rx="4" fill="#e2ece7" />
+    <rect x="1032" y="248" width="58" height="22" rx="11" fill="#c8524a" opacity="0.14" />
+    <rect x="1046" y="255" width="30" height="8" rx="4" fill="#c8524a" opacity="0.6" />
+
+    <!-- progress -->
+    <rect x="812" y="300" width="288" height="12" rx="6" fill="#e2ede8" />
+    <rect x="812" y="300" width="192" height="12" rx="6" fill="url(#accent)" />
   </g>
 
-  <!-- logo mark -->
-  <g transform="translate(80 86)">
-    <rect width="128" height="128" rx="30" fill="url(#mark)" />
-    <circle cx="64" cy="64" r="34" fill="none" stroke="#ffffff" stroke-width="7" />
-    <path d="M48 65 L59 76 L81 53" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
-    <circle cx="64" cy="30" r="6" fill="#7fd6a8" />
+  <!-- floating verified badge -->
+  <g transform="translate(694,302)" filter="url(#soft)">
+    <circle r="36" fill="url(#accent)" />
+    <path d="M-14 1 L-4.5 10.5 L15 -9.5" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
   </g>
-
-  <!-- wordmark -->
-  <text x="250" y="158" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="80" font-weight="700" fill="#ffffff">RollCall</text>
-  <text x="254" y="208" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" letter-spacing="7" fill="#a9dcc6">GENERIC ATTENDANCE &amp; HOURS TRACKING</text>
 </svg>
