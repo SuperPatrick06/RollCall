@@ -1,39 +1,38 @@
 :root {
   font-family: Inter, "SF Pro Text", "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
-  color: #17262c;
-  background: #eff4f2;
+  color: #16241e;
+  background: #f6f8f7;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  --ink: #17262c;
-  --ink-soft: #31434a;
-  --muted: #6c7b80;
-  --line: #d8e2df;
-  --line-strong: #c8d5d1;
+  --ink: #16241e;
+  --ink-soft: #3a4a42;
+  --muted: #6b7b73;
+  --line: #e6eae8;
+  --line-strong: #d5ded9;
   --surface: #ffffff;
-  --surface-soft: #f6f9f8;
-  --green: #14715f;
-  --green-dark: #0e594b;
-  --green-pale: #e5f2ee;
-  --blue: #1d6392;
-  --blue-pale: #e7f0f7;
-  --gold: #d28a1c;
-  --gold-pale: #fbf0da;
-  --red: #bd454c;
-  --red-pale: #faeaec;
-  --shadow-soft: 0 8px 24px rgba(28, 51, 45, 0.055);
-  --shadow-raised: 0 16px 44px rgba(21, 46, 40, 0.09);
+  --surface-soft: #f6f8f7;
+  --green: #12805c;
+  --green-dark: #0d6247;
+  --green-pale: #e8f4ee;
+  --blue: #47647f;
+  --blue-pale: #eef2f6;
+  --gold: #a67c12;
+  --gold-pale: #f9f1dc;
+  --red: #bf4a50;
+  --red-pale: #fbebec;
+  --shadow-soft: 0 1px 2px rgba(16, 40, 32, 0.04), 0 7px 20px rgba(16, 40, 32, 0.05);
+  --shadow-raised: 0 14px 36px rgba(16, 40, 32, 0.10);
 }
 
 * {
   box-sizing: border-box;
 }
 
-/* Lucide SVG icon alignment fix – eliminates baseline shift across all containers */
+/* Lucide SVG icon alignment fix - eliminates baseline shift across all containers */
 svg.lucide {
   display: block;
   vertical-align: middle;
   flex-shrink: 0;
-  margin: auto;
 }
 
 html,
@@ -46,7 +45,9 @@ body,
 
 body {
   min-height: 100vh;
-  background: #eff4f2;
+  background:
+    radial-gradient(1100px 480px at 85% -8%, rgba(18,128,92,0.05), transparent 62%),
+    #f6f8f7;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -81,7 +82,7 @@ input[type="month"] {
 }
 
 :focus-visible {
-  outline: 3px solid rgba(29, 99, 146, 0.18);
+  outline: 3px solid rgba(18,128,92,0.22);
   outline-offset: 2px;
 }
 
@@ -118,15 +119,15 @@ input[type="month"] {
   padding: 0;
   border: 1px solid transparent;
   border-radius: 6px;
-  color: #697b80;
+  color: #6b7b73;
   background: transparent;
   transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
 }
 
 .icon-button:hover {
   color: var(--ink);
-  background: #edf3f1;
-  border-color: #dbe5e2;
+  background: #ecf2ef;
+  border-color: #d8e2dd;
 }
 
 .primary-button,
@@ -153,26 +154,26 @@ input[type="month"] {
   color: #fff;
   background: var(--green);
   border-color: var(--green);
-  box-shadow: 0 7px 16px rgba(20, 113, 95, 0.16);
+  box-shadow: 0 7px 16px rgba(18,128,92,0.16);
 }
 
 .primary-button:hover:not(:disabled) {
   background: var(--green-dark);
   border-color: var(--green-dark);
-  box-shadow: 0 9px 20px rgba(14, 89, 75, 0.2);
+  box-shadow: 0 9px 20px rgba(13,98,71,0.22);
 }
 
 .secondary-button {
   padding: 0 15px;
-  color: #2b413e;
+  color: #2c3c34;
   background: #fff;
   border-color: var(--line-strong);
-  box-shadow: 0 3px 10px rgba(28, 51, 45, 0.04);
+  box-shadow: 0 3px 10px rgba(16,40,32,0.04);
 }
 
 .secondary-button:hover:not(:disabled) {
-  background: #f7faf9;
-  border-color: #aebfba;
+  background: #f3f6f4;
+  border-color: #a9bfb5;
 }
 
 .text-button {
@@ -188,8 +189,8 @@ input[type="month"] {
 }
 
 .danger-button:hover:not(:disabled) {
-  background: #9f3037;
-  border-color: #9f3037;
+  background: #a84045;
+  border-color: #a84045;
 }
 
 .full-button,
@@ -201,7 +202,7 @@ input[type="month"] {
   min-height: 100vh;
   display: grid;
   grid-template-columns: minmax(420px, 1.06fr) minmax(420px, 0.74fr);
-  background: #f7f9f8;
+  background: #ffffff;
 }
 
 .login-brand {
@@ -213,8 +214,11 @@ input[type="month"] {
   justify-content: center;
   gap: 30px;
   overflow: hidden;
-  background: #183039;
-  border-right: 1px solid #203d45;
+  background:
+    radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1.6px) 0 0 / 26px 26px,
+    radial-gradient(760px 420px at 78% 22%, rgba(127, 214, 168, 0.20), transparent 66%),
+    linear-gradient(135deg, #0b1d18 0%, #164036 55%, #2e7457 100%);
+  border-right: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 .login-brand::before,
@@ -241,13 +245,13 @@ input[type="month"] {
 .login-emblem {
   position: relative;
   z-index: 1;
-  width: min(48vw, 410px);
-  max-width: 60%;
+  width: min(34vw, 230px);
+  max-width: 46%;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 50%;
-  border: 12px solid rgba(255, 255, 255, 0.96);
-  box-shadow: 0 28px 72px rgba(4, 20, 25, 0.32);
+  border: 8px solid rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 48px rgba(4,18,14,0.35);
 }
 
 .login-brand-copy {
@@ -262,14 +266,14 @@ input[type="month"] {
 }
 
 .login-brand-copy strong {
-  color: #f7fbfa;
+  color: #f2f8f5;
   font-size: 1rem;
   font-weight: 680;
 }
 
 .login-brand-copy span {
   margin-top: 7px;
-  color: #91aaa9;
+  color: #8fa79d;
   font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -296,7 +300,7 @@ input[type="month"] {
 
 .login-title h1 {
   margin: 11px 0 12px;
-  color: #12242b;
+  color: #16241e;
   font-size: clamp(2.25rem, 4vw, 3.55rem);
   line-height: 1.05;
   letter-spacing: 0;
@@ -311,7 +315,7 @@ input[type="month"] {
 .login-panel form > label {
   display: block;
   margin-bottom: 9px;
-  color: #35464c;
+  color: #3a4a42;
   font-size: 0.84rem;
   font-weight: 700;
 }
@@ -323,17 +327,17 @@ input[type="month"] {
   align-items: center;
   gap: 10px;
   padding: 0 13px;
-  background: #fbfcfc;
+  background: #f9fbfa;
   border: 1px solid var(--line-strong);
   border-radius: 6px;
-  color: #70807f;
+  color: #6b7b73;
 }
 
 .password-input:focus-within,
 .input-with-icon:focus-within {
   border-color: var(--green);
   background: #fff;
-  box-shadow: 0 0 0 4px rgba(20, 113, 95, 0.09);
+  box-shadow: 0 0 0 4px rgba(18,128,92,0.09);
 }
 
 .password-input input,
@@ -359,14 +363,16 @@ input[type="month"] {
 .login-footnote {
   display: block;
   margin-top: 36px;
-  color: #8b989b;
+  color: #8ca29a;
   font-size: 0.72rem;
   text-align: center;
 }
 
 .app-shell {
   min-height: 100vh;
-  background: #eff4f2;
+  background:
+    radial-gradient(1100px 480px at 85% -8%, rgba(18,128,92,0.05), transparent 62%),
+    #f6f8f7;
 }
 
 .sidebar {
@@ -376,9 +382,11 @@ input[type="month"] {
   width: 252px;
   display: flex;
   flex-direction: column;
-  color: #eaf1ef;
-  background: #162d35;
-  border-right: 1px solid #234149;
+  color: #e7efea;
+  background:
+    radial-gradient(640px 320px at 22% -6%, rgba(127, 214, 168, 0.12), transparent 70%),
+    #152e25;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .sidebar-brand {
@@ -397,7 +405,7 @@ input[type="month"] {
   border: 3px solid rgba(255, 255, 255, 0.9);
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 8px 20px rgba(2, 15, 19, 0.25);
+  box-shadow: 0 8px 20px rgba(4,18,14,0.28);
 }
 
 .sidebar-brand div {
@@ -417,7 +425,7 @@ input[type="month"] {
 
 .sidebar-brand span {
   margin-top: 5px;
-  color: #91aaa8;
+  color: #8fa79d;
   font-size: 0.57rem;
   letter-spacing: 0.08em;
   white-space: nowrap;
@@ -426,7 +434,7 @@ input[type="month"] {
 .sidebar-close {
   display: none;
   margin-left: auto;
-  color: #c8d7d4;
+  color: #bfd2ca;
 }
 
 .sidebar nav {
@@ -443,7 +451,7 @@ input[type="month"] {
   align-items: center;
   gap: 13px;
   padding: 0 14px;
-  color: #a9bcba;
+  color: #a8bcb3;
   background: transparent;
   border: 0;
   border-radius: 6px;
@@ -460,12 +468,12 @@ input[type="month"] {
 
 .sidebar nav button.active {
   color: #fff;
-  background: #1e715f;
-  box-shadow: 0 9px 22px rgba(5, 27, 29, 0.18);
+  background: #12805c;
+  box-shadow: 0 9px 22px rgba(6,22,17,0.22);
 }
 
 .sidebar nav button.active svg:first-child {
-  color: #d9fff4;
+  color: #d6f5e7;
 }
 
 .nav-arrow {
@@ -494,7 +502,7 @@ input[type="month"] {
   align-items: center;
   gap: 12px;
   padding: 0 34px;
-  background: rgba(250, 252, 251, 0.94);
+  background: rgba(255,255,255,0.82);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(12px);
 }
@@ -509,7 +517,7 @@ input[type="month"] {
 }
 
 .topbar strong {
-  color: #20353b;
+  color: #1e2f26;
   font-size: 0.91rem;
   font-weight: 720;
 }
@@ -533,7 +541,7 @@ input[type="month"] {
   padding: 0 12px;
   color: var(--green);
   background: var(--green-pale);
-  border: 1px solid #cde5de;
+  border: 1px solid #cbe4d9;
   border-radius: 6px;
   font-size: 0.74rem;
   font-weight: 680;
@@ -565,7 +573,7 @@ input[type="month"] {
 
 .page-heading h1 {
   margin: 7px 0 0;
-  color: #12252c;
+  color: #16241e;
   font-size: 1.88rem;
   font-weight: 760;
   line-height: 1.2;
@@ -622,7 +630,7 @@ input[type="month"] {
 
 .daily-summary strong {
   margin-top: 20px;
-  color: #123d35;
+  color: #1b3a2c;
   font-size: 1.82rem;
   font-weight: 760;
   line-height: 1;
@@ -639,9 +647,9 @@ input[type="month"] {
   justify-content: center;
   gap: 9px;
   padding: 16px;
-  color: #145a86;
-  background: #edf5fa;
-  border-left: 1px solid #d4e4ee;
+  color: #0d6247;
+  background: #e8f4ee;
+  border-left: 1px solid #cbe4d9;
   font-weight: 720;
 }
 
@@ -697,7 +705,7 @@ input[type="month"] {
 
 .surface-title h2 {
   margin: 0;
-  color: #1e3037;
+  color: #1e2f26;
   font-size: 1.02rem;
   font-weight: 730;
   line-height: 1.35;
@@ -716,7 +724,7 @@ input[type="month"] {
 }
 
 .field label {
-  color: #3c5056;
+  color: #3a4a42;
   font-size: 0.75rem;
   font-weight: 680;
 }
@@ -730,7 +738,7 @@ input[type="month"] {
   height: 48px;
   padding: 0 13px;
   color: var(--ink);
-  background: #fbfcfc;
+  background: #f9fbfa;
   border: 1px solid var(--line-strong);
   border-radius: 6px;
   outline: 0;
@@ -742,7 +750,7 @@ input[type="month"] {
 .member-row > input:focus {
   border-color: var(--green);
   background: #fff;
-  box-shadow: 0 0 0 4px rgba(20, 113, 95, 0.085);
+  box-shadow: 0 0 0 4px rgba(18,128,92,0.085);
 }
 
 .two-fields {
@@ -757,7 +765,7 @@ input[type="month"] {
   align-items: center;
   padding-right: 12px;
   color: var(--muted);
-  background: #fbfcfc;
+  background: #f9fbfa;
   border: 1px solid var(--line-strong);
   border-radius: 6px;
 }
@@ -765,7 +773,7 @@ input[type="month"] {
 .input-suffix:focus-within {
   border-color: var(--green);
   background: #fff;
-  box-shadow: 0 0 0 4px rgba(20, 113, 95, 0.085);
+  box-shadow: 0 0 0 4px rgba(18,128,92,0.085);
 }
 
 .input-suffix input {
@@ -788,8 +796,8 @@ input[type="month"] {
   gap: 5px;
   margin-bottom: 23px;
   padding: 5px;
-  background: #edf2f0;
-  border: 1px solid #e1e8e5;
+  background: #edf2ef;
+  border: 1px solid #e2e9e5;
   border-radius: 6px;
 }
 
@@ -800,7 +808,7 @@ input[type="month"] {
   justify-content: center;
   gap: 7px;
   padding: 0 12px;
-  color: #68777c;
+  color: #6b7b73;
   background: transparent;
   border: 0;
   border-radius: 5px;
@@ -811,7 +819,7 @@ input[type="month"] {
 .segmented-control button.active {
   color: var(--green);
   background: #fff;
-  box-shadow: 0 4px 12px rgba(25, 55, 48, 0.085);
+  box-shadow: 0 4px 12px rgba(16,40,32,0.08);
 }
 
 .segmented-control button.active.danger {
@@ -825,8 +833,8 @@ input[type="month"] {
 
 .duration-control {
   padding: 16px;
-  background: #f6f9f8;
-  border: 1px solid #d8e3df;
+  background: #f6f8f7;
+  border: 1px solid #d8e2dd;
   border-radius: 6px;
 }
 
@@ -886,7 +894,7 @@ input[type="month"] {
   align-items: center;
   gap: 11px;
   padding: 11px 18px;
-  border-bottom: 1px solid #e8eeec;
+  border-bottom: 1px solid #e7edea;
 }
 
 .record-item:last-child {
@@ -923,7 +931,7 @@ input[type="month"] {
 
 .record-main strong small {
   margin-left: 8px;
-  color: #859195;
+  color: #8ca29a;
   font-size: 0.68rem;
   font-weight: 600;
 }
@@ -949,7 +957,7 @@ input[type="month"] {
 .row-delete:hover {
   color: var(--red);
   background: var(--red-pale);
-  border-color: #f4d7da;
+  border-color: #f4d8da;
 }
 
 .spinner-wrap,
@@ -961,7 +969,7 @@ input[type="month"] {
   flex-direction: column;
   gap: 9px;
   padding: 30px;
-  color: #879699;
+  color: #8ca29a;
   text-align: center;
 }
 
@@ -972,7 +980,7 @@ input[type="month"] {
 }
 
 .empty-state strong {
-  color: #5d7075;
+  color: #48584f;
   font-size: 0.86rem;
 }
 
@@ -1013,7 +1021,7 @@ input[type="month"] {
   align-items: center;
   gap: 14px;
   padding: 13px 22px;
-  border-bottom: 1px solid #e7eeec;
+  border-bottom: 1px solid #e7edea;
 }
 
 .ranking-row:last-child {
@@ -1022,17 +1030,17 @@ input[type="month"] {
 
 .ranking-row.rank-1 {
   border-left: 4px solid var(--gold);
-  background: #fffbf3;
+  background: #fcf8ee;
 }
 
 .ranking-row.rank-2 {
-  border-left: 4px solid #84949b;
-  background: #f8faf9;
+  border-left: 4px solid #98a8a1;
+  background: #f5f8f6;
 }
 
 .ranking-row.rank-3 {
-  border-left: 4px solid #ad7550;
-  background: #fcf8f4;
+  border-left: 4px solid #b08457;
+  background: #faf6f0;
 }
 
 .rank-number {
@@ -1040,13 +1048,13 @@ input[type="month"] {
   height: 32px;
   display: grid;
   place-items: center;
-  color: #7d8b8f;
+  color: #7c8b84;
   font-weight: 800;
 }
 
 .rank-1 .rank-number { color: var(--gold); }
-.rank-2 .rank-number { color: #718188; }
-.rank-3 .rank-number { color: #a36741; }
+.rank-2 .rank-number { color: #7c8b84; }
+.rank-3 .rank-number { color: #a9713f; }
 
 .rank-person strong,
 .rank-person span,
@@ -1101,15 +1109,15 @@ input[type="month"] {
   align-items: center;
   gap: 9px;
   padding: 0 8px;
-  color: #33474b;
+  color: #2c3c34;
   background: transparent;
   border: 0;
-  border-bottom: 1px solid #edf1f0;
+  border-bottom: 1px solid #eaf0ed;
   text-align: left;
 }
 
 .plan-row:hover {
-  background: #f5f9f7;
+  background: #f3f7f5;
 }
 
 .plan-month {
@@ -1157,8 +1165,8 @@ input[type="month"] {
   place-items: center;
   padding: 0 6px;
   border-radius: 10px;
-  color: #6b7a7e;
-  background: #e8efed;
+  color: #6b7b73;
+  background: #e9efec;
   font-size: 0.65rem;
 }
 
@@ -1176,8 +1184,8 @@ input[type="month"] {
 .data-table th {
   height: 46px;
   padding: 0 15px;
-  color: #6e7e82;
-  background: #f4f8f6;
+  color: #6b7b73;
+  background: #f3f7f5;
   border-bottom: 1px solid var(--line);
   text-align: left;
   white-space: nowrap;
@@ -1188,7 +1196,7 @@ input[type="month"] {
 .data-table td {
   min-height: 62px;
   padding: 14px 15px;
-  border-bottom: 1px solid #e8eeec;
+  border-bottom: 1px solid #e7edea;
   vertical-align: middle;
 }
 
@@ -1197,7 +1205,7 @@ input[type="month"] {
 }
 
 .data-table tbody tr:hover {
-  background: #f8fbfa;
+  background: #f3f7f5;
 }
 
 .data-table tbody tr:last-child td {
@@ -1290,7 +1298,7 @@ input[type="month"] {
 
 .analytics-stat-copy > strong {
   margin-top: 7px;
-  color: #24373c;
+  color: #1e2f26;
   font-size: 1.12rem;
   font-weight: 760;
   line-height: 1.15;
@@ -1321,7 +1329,7 @@ input[type="month"] {
   margin-top: 7px;
   overflow: hidden;
   border-radius: 3px;
-  background: #dfe9e6;
+  background: #dce7e1;
 }
 
 .progress-track span {
@@ -1332,7 +1340,7 @@ input[type="month"] {
 }
 
 .muted {
-  color: #93a0a3;
+  color: #8ba098;
   font-size: 0.72rem;
 }
 
@@ -1416,7 +1424,7 @@ input[type="month"] {
   /* No backdrop-filter blur here: blurring the whole page every frame is a
      major GPU cost and made large modals stutter on open. A slightly darker
      solid-ish overlay dims the page just as well at a fraction of the cost. */
-  background: rgba(10, 27, 32, 0.66);
+  background: rgba(10,26,20,0.62);
   animation: fade-in 140ms ease;
 }
 
@@ -1431,7 +1439,7 @@ input[type="month"] {
   background: #fff;
   border: 1px solid var(--line-strong);
   border-radius: 8px;
-  box-shadow: 0 30px 84px rgba(7, 25, 30, 0.28);
+  box-shadow: 0 30px 84px rgba(16,40,32,0.22);
 }
 
 .modal-wide {
@@ -1496,7 +1504,7 @@ input[type="month"] {
   align-items: center;
   gap: 16px;
   padding: 13px 4px;
-  border-bottom: 1px solid #e8eeec;
+  border-bottom: 1px solid #e7edea;
 }
 
 .member-row:has(> input) {
@@ -1579,16 +1587,16 @@ input[type="month"] {
   gap: 8px;
   padding: 7px 8px 7px 15px;
   color: #fff;
-  background: #153d35;
+  background: #152e25;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 7px;
-  box-shadow: 0 18px 48px rgba(9, 30, 34, 0.26);
+  box-shadow: 0 18px 48px rgba(8,24,18,0.28);
   font-size: 0.8rem;
   animation: toast-in 180ms ease;
 }
 
 .toast-error {
-  background: #852f35;
+  background: #9c383d;
 }
 
 .toast .icon-button {
@@ -1651,7 +1659,7 @@ input[type="month"] {
     min-height: 320px;
     gap: 20px;
     border-right: 0;
-    border-bottom: 1px solid #27434a;
+    border-bottom: 1px solid #21423a;
   }
 
   .login-emblem {
@@ -1680,7 +1688,7 @@ input[type="month"] {
   .sidebar {
     width: min(290px, 84vw);
     transform: translateX(-101%);
-    box-shadow: 18px 0 48px rgba(6, 24, 29, 0.24);
+    box-shadow: 18px 0 48px rgba(8,24,18,0.26);
     transition: transform 190ms ease;
   }
 
@@ -1697,7 +1705,7 @@ input[type="month"] {
     position: fixed;
     inset: 0;
     z-index: 25;
-    background: rgba(12, 27, 31, 0.45);
+    background: rgba(10,26,20,0.45);
     border: 0;
   }
 
@@ -1709,7 +1717,7 @@ input[type="month"] {
   .topbar {
     height: 66px;
     padding: 0 18px;
-    box-shadow: 0 5px 18px rgba(25, 51, 44, 0.045);
+    box-shadow: 0 5px 18px rgba(16,40,32,0.05);
   }
 
   .menu-button {
@@ -1746,7 +1754,7 @@ input[type="month"] {
     padding: 5px 6px env(safe-area-inset-bottom);
     background: rgba(255, 255, 255, 0.97);
     border-top: 1px solid var(--line-strong);
-    box-shadow: 0 -9px 28px rgba(27, 50, 44, 0.07);
+    box-shadow: 0 -9px 28px rgba(16,40,32,0.07);
     backdrop-filter: blur(12px);
   }
 
@@ -1757,7 +1765,7 @@ input[type="month"] {
     align-items: center;
     justify-content: center;
     gap: 3px;
-    color: #768589;
+    color: #6b7b73;
     background: transparent;
     border: 0;
     border-radius: 4px;
@@ -1951,7 +1959,7 @@ input[type="month"] {
     display: grid;
     gap: 15px;
     padding: 19px;
-    border-bottom: 1px solid #e5ecea;
+    border-bottom: 1px solid #e7edea;
   }
 
   .analytics-member-row:last-child {
@@ -2015,8 +2023,8 @@ input[type="month"] {
   }
 
   .rate-badge.muted-rate {
-    color: #718084;
-    background: #eef2f1;
+    color: #6b7b73;
+    background: #edf2ef;
     font-size: 0.65rem;
   }
 
@@ -2043,7 +2051,7 @@ input[type="month"] {
 
   .analytics-member-metrics strong {
     margin-top: 5px;
-    color: #2a3b40;
+    color: #1e2f26;
     font-size: 0.76rem;
     line-height: 1.2;
     overflow-wrap: anywhere;
@@ -2457,7 +2465,7 @@ input[type="month"] {
   font-size: 0.62rem;
   font-weight: 700;
   color: var(--muted);
-  background: #eef2f0;
+  background: #edf2ef;
   border-radius: 999px;
 }
 
@@ -2524,7 +2532,7 @@ input[type="month"] {
   align-items: center;
   gap: 10px;
   padding: 9px 12px;
-  border-bottom: 1px solid #eef2f0;
+  border-bottom: 1px solid #edf2ef;
   cursor: pointer;
   font-size: 0.82rem;
 }

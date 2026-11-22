@@ -109,18 +109,22 @@ An open-source attendance system for clubs, student organizations, volunteer cor
 
 **📋 Attendance** — log hours per person with a live daily summary
 
-![Attendance](docs/images/attendance-desktop.png)
+<p align="center">
+  <img src="docs/images/attendance-desktop.png" alt="Attendance page: log hours per person with a live daily summary" width="920">
+</p>
 
 <table>
 <tr>
-<td align="center"><img src="docs/images/ranking-desktop.png" alt="Hours ranking page with leaderboard and monthly plan panel" width="480"><br><sub><b>🏆 Hours ranking</b></sub></td>
-<td align="center"><img src="docs/images/assessment-desktop.png" alt="Assessment page with exam and violation tabs" width="480"><br><sub><b>📝 Assessments & violations</b></sub></td>
+<td align="center"><img src="docs/images/ranking-desktop.png" alt="Hours ranking page with leaderboard and monthly plan panel" width="400"><br><sub><b>🏆 Hours ranking</b></sub></td>
+<td align="center"><img src="docs/images/assessment-desktop.png" alt="Assessment page with exam and violation tabs" width="400"><br><sub><b>📝 Assessments & violations</b></sub></td>
 </tr>
 </table>
 
 **📊 Analytics** — monthly attendance rate and scores with CSV export
 
-![Analytics](docs/images/analytics-desktop.png)
+<p align="center">
+  <img src="docs/images/analytics-desktop.png" alt="Analytics page: monthly attendance rate and scores" width="920">
+</p>
 
 <details>
 <summary><b>📱 Mobile UI</b> (click to expand)</summary>

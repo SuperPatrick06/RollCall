@@ -96,8 +96,8 @@ try {
   await client.send('Page.enable')
   await client.send('Runtime.enable')
   await client.send('Emulation.setDeviceMetricsOverride', {
-    width: 1440,
-    height: 960,
+    width: 1920,
+    height: 1080,
     deviceScaleFactor: 1,
     mobile: false,
   })

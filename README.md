@@ -109,23 +109,27 @@
 
 **📋 出勤签到** — 逐人登记每日出勤时长，实时统计当日签到人数、累计出勤时长、扣除时长
 
-![出勤签到](docs/images/attendance-desktop.png)
+<p align="center">
+  <img src="docs/images/attendance-desktop.png" alt="出勤签到页面：逐人登记出勤时长与当日统计" width="920">
+</p>
 
 <table>
 <tr>
-<td align="center"><img src="docs/images/ranking-desktop.png" alt="时长排行页面：全员净出勤时长排行榜与月度计划面板" width="480"><br><sub><b>🏆 时长排行</b></sub></td>
-<td align="center"><img src="docs/images/assessment-desktop.png" alt="考核与纪律页面：考试分数与违规记录双标签录入" width="480"><br><sub><b>📝 考核与违规</b></sub></td>
+<td align="center"><img src="docs/images/ranking-desktop.png" alt="时长排行页面：全员净出勤时长排行榜与月度计划面板" width="400"><br><sub><b>🏆 时长排行</b></sub></td>
+<td align="center"><img src="docs/images/assessment-desktop.png" alt="考核与纪律页面：考试分数与违规记录双标签录入" width="400"><br><sub><b>📝 考核与违规</b></sub></td>
 </tr>
 </table>
 
 **📊 出勤分析** — 按月统计出勤率与考核分数，支持导出 CSV
 
-![出勤分析](docs/images/analytics-desktop.png)
+<p align="center">
+  <img src="docs/images/analytics-desktop.png" alt="出勤分析页面：按月统计出勤率与考核分数" width="920">
+</p>
 
 <table>
 <tr>
-<td align="center"><img src="docs/images/logs-desktop.png" alt="操作日志页面：按分类筛选的增删操作记录表" width="480"><br><sub><b>📜 操作日志</b></sub></td>
-<td align="center"><img src="docs/images/members-desktop.png" alt="成员管理页面：成员名册与届别筛选" width="480"><br><sub><b>👥 成员管理</b></sub></td>
+<td align="center"><img src="docs/images/logs-desktop.png" alt="操作日志页面：按分类筛选的增删操作记录表" width="400"><br><sub><b>📜 操作日志</b></sub></td>
+<td align="center"><img src="docs/images/members-desktop.png" alt="成员管理页面：成员名册与届别筛选" width="400"><br><sub><b>👥 成员管理</b></sub></td>
 </tr>
 </table>
 
