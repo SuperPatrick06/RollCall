@@ -37,6 +37,7 @@
 [📋 功能](#-功能模块) ·
 [📸 截图](#-界面预览) ·
 [🚀 快速开始](#-快速开始) ·
+[🌐 部署](#-部署到服务器) ·
 [📧 邮件月报](#-邮件月报) ·
 [🏗️ 架构](#-系统架构) ·
 [❓ FAQ](#-常见问题) ·
@@ -162,6 +163,9 @@ Windows 下双击 `start.bat`，或在 PowerShell 中运行：
 > [!IMPORTANT]
 > 初始访问密码为 `2006`。进入系统后请立即在「修改密码」中更换为高强度密码。
 
+> [!TIP]
+> 以上默认只能在本机访问。想让**手机、平板或其他电脑**访问？见下方 [🌐 部署到服务器](#-部署到服务器)。
+
 <details>
 <summary><b>手动启动</b>（不使用启动脚本时）</summary>
 
@@ -192,6 +196,54 @@ python seed_demo.py --force  # 清空后重新生成
 > `--force` 会清空现有成员与全部记录，请勿在正式数据上执行。
 
 </details>
+
+---
+
+## 🌐 部署到服务器
+
+系统部署到服务器后，手机、平板和其他电脑都能通过浏览器访问，也不需要你的电脑一直开机。
+
+### 方式一：局域网快速试用（2 分钟）
+
+适合和队友在同一个 Wi-Fi 下临时使用。`start.bat` / `start.ps1` 启动后，前端已默认监听所有网卡，其他设备直接访问：
+
+```text
+http://<你的电脑内网IP>:5173
+```
+
+内网 IP 可用 `ipconfig`（Windows）或 `ip addr`（Linux/macOS）查看。首次访问时注意放行防火墙（Windows 会弹出授权提示）。
+
+> [!NOTE]
+> 局域网模式依赖你的电脑保持开机，且只有同一网络内的设备能访问，适合训练/活动现场临时使用。
+
+### 方式二：云服务器部署（推荐 · 长期使用）
+
+部署一次，之后随时随地访问。核心架构：**Nginx(80/443) → FastAPI(127.0.0.1:8000) → SQLite**。
+
+| 步骤 | 操作 |
+|:---:|:---|
+| 1️⃣ 构建前端 | `npm --prefix frontend ci && npm --prefix frontend run build` 生成 `frontend/dist` |
+| 2️⃣ 上传代码 | 把 `backend/` 与 `frontend/dist` 上传到服务器（如 `/opt/rollcall/`） |
+| 3️⃣ 后端常驻 | systemd 托管 uvicorn，开机自启、崩溃自动重启 |
+| 4️⃣ 反向代理 | Nginx 托管静态页面，并把 `/api` 转发到后端 |
+| 5️⃣ 公网访问 | 安全组放行 80/443；绑定域名 + Certbot 开启 HTTPS |
+| 6️⃣ 手机访问 | 浏览器打开你的域名/IP 即用，可「添加到主屏幕」当 App 用 |
+
+> [!TIP]
+> 前端通过**相对路径** `/api` 请求后端，Nginx 反代后前后端同源——**不需要修改任何接口地址或配置**。
+
+每一步的具体命令、`systemd` / `Nginx` 配置文件模板、每日自动备份与安全加固，见完整图文教程 **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)**。
+
+### 迁移本地数据到服务器
+
+把本地的 `backend/data/attendance.db` 复制到服务器相同路径（或用 `ATTENDANCE_DB_PATH` 环境变量指定），全部记录即刻保留：
+
+```bash
+scp backend/data/attendance.db user@your-server-ip:/opt/rollcall/backend/data/
+```
+
+> [!WARNING]
+> 复制数据库前请先停止服务；若服务在运行中，请改用 SQLite `.backup` 命令或同时复制 `-wal` / `-shm` 文件。
 
 ---
 

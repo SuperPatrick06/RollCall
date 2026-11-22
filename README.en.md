@@ -37,6 +37,7 @@ An open-source attendance system for clubs, student organizations, volunteer cor
 [📋 Features](#-features) ·
 [📸 Screenshots](#-screenshots) ·
 [🚀 Quick start](#-quick-start) ·
+[🌐 Deploy](#-deploy-to-a-server) ·
 [📧 Email digests](#-email-digests) ·
 [🏗️ Architecture](#-architecture) ·
 [❓ FAQ](#-faq) ·
@@ -155,6 +156,9 @@ Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop both services.
 > [!IMPORTANT]
 > The initial access password is `2006`. Change it immediately after the first login via **Change password** in the sidebar.
 
+> [!TIP]
+> By default only the local machine can access the app. Want it on **phones, tablets or other computers**? See [🌐 Deploy to a Server](#-deploy-to-a-server) below.
+
 <details>
 <summary><b>Manual start</b> (without the start scripts)</summary>
 
@@ -185,6 +189,54 @@ python seed_demo.py --force  # wipe and re-seed
 > `--force` wipes existing members and all records. Never run it on production data.
 
 </details>
+
+---
+
+## 🌐 Deploy to a Server
+
+Deploy RollCall to a server and phones, tablets and other computers can all reach it through a browser — no need to keep your own machine running.
+
+### Option 1: LAN trial (2 minutes)
+
+Great for on-site use with teammates on the same Wi-Fi. After starting `start.bat` / `start.ps1`, the frontend already listens on all network interfaces — other devices just open:
+
+```text
+http://<your-machine-LAN-IP>:5173
+```
+
+Find your LAN IP with `ipconfig` (Windows) or `ip addr` (Linux/macOS). Allow the port through your firewall when prompted (Windows shows an approval dialog).
+
+> [!NOTE]
+> LAN mode requires your machine to stay on and is only reachable within the same network — fine for temporary use during training or events.
+
+### Option 2: Cloud server (recommended · long-term)
+
+Deploy once, access anywhere. Architecture: **Nginx (80/443) → FastAPI (127.0.0.1:8000) → SQLite**.
+
+| Step | Action |
+|:---:|:---|
+| 1️⃣ Build frontend | `npm --prefix frontend ci && npm --prefix frontend run build` → `frontend/dist` |
+| 2️⃣ Upload code | Copy `backend/` and `frontend/dist` to the server (e.g. `/opt/rollcall/`) |
+| 3️⃣ Run backend | systemd keeps uvicorn alive: auto-start on boot, auto-restart on crash |
+| 4️⃣ Reverse proxy | Nginx serves the static pages and forwards `/api` to the backend |
+| 5️⃣ Public access | Open ports 80/443; bind a domain + Certbot for HTTPS |
+| 6️⃣ Mobile access | Open your domain/IP in any phone browser; "Add to Home Screen" for an app-like feel |
+
+> [!TIP]
+> The frontend calls the backend through **relative** `/api` paths — behind Nginx everything is same-origin, so **no API URL or configuration changes are needed**.
+
+Full step-by-step commands, `systemd` / `Nginx` config templates, daily backups and hardening: **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)** (Chinese).
+
+### Moving local data to the server
+
+Copy your local `backend/data/attendance.db` to the same path on the server (or point `ATTENDANCE_DB_PATH` at it) to keep every record:
+
+```bash
+scp backend/data/attendance.db user@your-server-ip:/opt/rollcall/backend/data/
+```
+
+> [!WARNING]
+> Stop the service before copying the database. If it must stay running, use the SQLite `.backup` command or copy the `-wal` / `-shm` files too.
 
 ---
 
