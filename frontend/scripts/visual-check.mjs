@@ -126,6 +126,25 @@ try {
   }
 
   await client.send('Runtime.evaluate', {
+    expression: `Array.from(document.querySelectorAll('.sidebar-footer button')).find((button) => button.textContent.includes('修改密码'))?.click()`,
+  })
+  await delay(450)
+  await screenshot(client, 'password-modal.png')
+  await client.send('Runtime.evaluate', {
+    expression: `document.querySelector('.modal-header .icon-button')?.click()`,
+  })
+  await delay(350)
+  await client.send('Runtime.evaluate', {
+    expression: `Array.from(document.querySelectorAll('.sidebar-footer button')).find((button) => button.textContent.includes('邮件推送'))?.click()`,
+  })
+  await delay(800)
+  await screenshot(client, 'email-modal.png')
+  await client.send('Runtime.evaluate', {
+    expression: `document.querySelector('.modal-header .icon-button')?.click()`,
+  })
+  await delay(350)
+
+  await client.send('Runtime.evaluate', {
     expression: `Array.from(document.querySelectorAll('.sidebar nav button')).find((button) => button.textContent.includes('签到'))?.click()`,
   })
   await client.send('Emulation.setDeviceMetricsOverride', {

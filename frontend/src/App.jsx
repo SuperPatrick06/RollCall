@@ -550,9 +550,18 @@ function AttendancePage({ members, onManageMembers, notify }) {
       </section>
 
       <section className="daily-summary">
-        <div><span>当日签到人数</span><strong>{summary.attendance_count}</strong><small>人</small></div>
-        <div><span>累计出勤时长</span><strong>{Number((summary.credited_minutes / 60).toFixed(1))}</strong><small>小时</small></div>
-        <div><span>当日扣除时长</span><strong>{Number((summary.deducted_minutes / 60).toFixed(1))}</strong><small>小时</small></div>
+        <div className="daily-stat">
+          <span className="summary-icon green"><UsersRound size={20} /></span>
+          <div className="daily-stat-copy"><span>当日签到人数</span><strong>{summary.attendance_count}<small> 人</small></strong></div>
+        </div>
+        <div className="daily-stat">
+          <span className="summary-icon blue"><Clock3 size={20} /></span>
+          <div className="daily-stat-copy"><span>累计出勤时长</span><strong>{Number((summary.credited_minutes / 60).toFixed(1))}<small> 小时</small></strong></div>
+        </div>
+        <div className="daily-stat">
+          <span className="summary-icon red"><CircleMinus size={20} /></span>
+          <div className="daily-stat-copy"><span>当日扣除时长</span><strong>{Number((summary.deducted_minutes / 60).toFixed(1))}<small> 小时</small></strong></div>
+        </div>
         <label className="summary-date">
           <CalendarDays size={18} />
           <input type="date" value={dateValue} onChange={(event) => setDateValue(event.target.value)} />
@@ -1362,6 +1371,7 @@ function AppShell({ onLogout, notify }) {
 
   const pageMeta = navItems.find((item) => item.id === activePage)
   const pageTitle = activePage === 'members' ? '成员管理' : pageMeta?.label
+  const PageIcon = activePage === 'members' ? UsersRound : (pageMeta?.icon ?? ListChecks)
   const navigate = (id) => { setActivePage(id); setMenuOpen(false) }
 
   return (
@@ -1394,6 +1404,7 @@ function AppShell({ onLogout, notify }) {
       <div className="app-main">
         <header className="topbar">
           <IconButton label="打开菜单" className="menu-button" onClick={() => setMenuOpen(true)}><Menu size={20} /></IconButton>
+          <span className="topbar-icon"><PageIcon size={19} /></span>
           <div><strong>{pageTitle}</strong><span>{todayLabel()}</span></div>
           <button className="topbar-security" onClick={() => setPasswordOpen(true)}><ShieldCheck size={17} />本地数据已连接</button>
         </header>

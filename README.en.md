@@ -149,6 +149,20 @@ Monthly attendance rate and scores with CSV export.
 
 </details>
 
+<details>
+<summary><b>🗂️ Dialogs</b> (click to expand)</summary>
+
+<br>
+
+<table>
+<tr>
+<td align="center"><img src="docs/images/email-modal.png" alt="Email reports dialog with SMTP settings, send and history tabs" width="420"><br><sub><b>📧 Email reports</b> · SMTP / Send / History</sub></td>
+<td align="center"><img src="docs/images/password-modal.png" alt="Change password dialog" width="420"><br><sub><b>🔑 Change password</b></sub></td>
+</tr>
+</table>
+
+</details>
+
 ---
 
 ## 🚀 Quick Start

@@ -156,6 +156,20 @@
 
 </details>
 
+<details>
+<summary><b>🗂️ 弹窗界面</b>（点击展开）</summary>
+
+<br>
+
+<table>
+<tr>
+<td align="center"><img src="docs/images/email-modal.png" alt="邮件推送弹窗：SMTP 设置、发送报告与发送记录" width="420"><br><sub><b>📧 邮件推送</b> · SMTP 设置 / 发送报告 / 发送记录</sub></td>
+<td align="center"><img src="docs/images/password-modal.png" alt="修改密码弹窗" width="420"><br><sub><b>🔑 修改密码</b></sub></td>
+</tr>
+</table>
+
+</details>
+
 ---
 
 ## 🚀 快速开始
