@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#122b24" />
+      <stop offset="0.55" stop-color="#1e5747" />
+      <stop offset="1" stop-color="#2f7a5d" />
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.08" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#bg)" />
+
+  <!-- decorative motif: roll-call ring + check -->
+  <g stroke="#7fd6a8" fill="none" opacity="0.20">
+    <circle cx="1010" cy="150" r="118" stroke-width="26" />
+    <circle cx="1010" cy="150" r="60" stroke-width="14" />
+    <path d="M972 152 l26 26 50 -58" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <g stroke="#ffffff" fill="none" opacity="0.10" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M698 66 l13 13 24 -28" />
+    <path d="M760 236 l13 13 24 -28" />
+    <path d="M862 66 l13 13 24 -28" />
+  </g>
+
+  <!-- logo mark -->
+  <g transform="translate(80 86)">
+    <rect width="128" height="128" rx="30" fill="url(#mark)" />
+    <circle cx="64" cy="64" r="34" fill="none" stroke="#ffffff" stroke-width="7" />
+    <path d="M48 65 L59 76 L81 53" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="64" cy="30" r="6" fill="#7fd6a8" />
+  </g>
+
+  <!-- wordmark -->
+  <text x="250" y="158" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="80" font-weight="700" fill="#ffffff">RollCall</text>
+  <text x="254" y="208" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" letter-spacing="7" fill="#a9dcc6">GENERIC ATTENDANCE &amp; HOURS TRACKING</text>
+</svg>

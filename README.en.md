@@ -1,68 +1,141 @@
+<a id="readme-top"></a>
+
 <div align="center">
 
-# RollCall · 点名册
-
-**Generic Attendance & Hours Tracking**
-
-For clubs, student organizations, volunteer corps, sports teams and any kind of team
+<img src="docs/images/banner.svg" alt="RollCall — generic attendance and hours tracking system" width="100%">
 
 <br>
 
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
+**Check-in · Hours ranking · Assessments · Violation deductions · Analytics · Email digests**
 
-English · [简体中文](README.md)
+An open-source attendance system for clubs, student organizations, volunteer corps, sports teams and any kind of team
+
+<br><br>
+
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-2ea44f?style=flat-square)
+![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)
+
+[简体中文](README.md) · **English**
 
 </div>
 
----
+<br>
 
-## About
+> [!NOTE]
+> RollCall organizes everything around **hours attended**: log each session per person, auto-accumulate totals and rankings, measure attendance rate against a monthly plan, then layer on assessment scores, violation deductions, CSV reports and monthly email digests — one system for all your attendance chores.
 
-RollCall is an open-source, self-hosted attendance system organized around **hours attended**: log each session per person, auto-accumulate totals and rankings, measure attendance rate against a monthly plan, and keep assessment scores, violation deductions, CSV reports and monthly email digests — all in one place.
+<br>
 
-- 🧩 **Zero setup** — one-click start scripts, data stored in a local SQLite file, no database server needed
-- 📱 **Responsive** — desktop / tablet / mobile layouts
-- 🔒 **Simple auth** — a shared access password plus session tokens (PBKDF2-SHA256)
-- 📧 **Email digests** — scheduled or one-click personal monthly reports
-- 🪪 **White-label friendly** — neutral placeholder logo, easy to rebrand
+<div align="center">
 
-![Login](docs/images/login-desktop.png)
+[✨ Why](#-why-rollcall) ·
+[📋 Features](#-features) ·
+[📸 Screenshots](#-screenshots) ·
+[🚀 Quick start](#-quick-start) ·
+[📧 Email digests](#-email-digests) ·
+[🏗️ Architecture](#-architecture) ·
+[❓ FAQ](#-faq) ·
+[🤝 Contributing](#-contributing)
 
----
+</div>
 
-## Features
+<br>
 
-| Module | Description |
-|:---|:---|
-| 📋 Attendance | Log hours per person with credit / deduction modes, filter by date |
-| 🏆 Hours ranking | Leaderboard of net hours, monthly view, monthly plan targets |
-| 📝 Assessments | Exam scores with exam name, item and score |
-| ⚠️ Violations | Misconduct records that automatically deduct hours |
-| 📊 Analytics | Monthly attendance rate & average scores, CSV export |
-| 📜 Operation logs | Every add/delete with timestamp, detail and operator IP |
-| 👥 Members | Roster, cohort grouping, email maintenance, enable/disable |
-| 📧 Email reports | Scheduled or one-click personal monthly digests |
+<p align="center">
+  <img src="docs/images/login-desktop.png" alt="RollCall login screen with brand panel on the left and password form on the right" width="880">
+</p>
 
 ---
 
-## Screenshots
+## ✨ Why RollCall
 
-| Attendance | Ranking |
-|:---:|:---:|
-| ![Attendance](docs/images/attendance-desktop.png) | ![Ranking](docs/images/ranking-desktop.png) |
+<table>
+<tr>
+<td align="center" width="25%"><b>🧩 Zero setup</b><br><sub>One-click start scripts and local SQLite<br>no database server required</sub></td>
+<td align="center" width="25%"><b>🕒 Hours-first</b><br><sub>Modeled around attended hours<br>accumulate / deduct / rank / rate</sub></td>
+<td align="center" width="25%"><b>🔒 Your data</b><br><sub>Self-hosted, data stays with you<br>works on intranets too</sub></td>
+<td align="center" width="25%"><b>📱 Responsive</b><br><sub>Desktop / tablet / mobile layouts<br>use it straight from a phone browser</sub></td>
+</tr>
+</table>
 
-| Assessments | Analytics |
-|:---:|:---:|
-| ![Assessments](docs/images/assessment-desktop.png) | ![Analytics](docs/images/analytics-desktop.png) |
+<br>
+
+| | Paper / Excel | Cloud attendance SaaS | **RollCall** |
+|:---|:---:|:---:|:---:|
+| Cost | Free | Per user / month | ✅ Free & open source |
+| Hosting | — | Vendor-bound | ✅ Self-hosted / intranet |
+| Hours totals & ranking | Manual | Limited | ✅ Built-in |
+| Assessments + deductions | Manual | Rarely | ✅ Built-in |
+| Email digests | Manual | ✅ | ✅ |
+| Data ownership | Yours | Vendor | ✅ Fully yours |
 
 ---
 
-## Quick Start
+## 📋 Features
 
-Requirements: **Python 3.10+**, **Node.js 18+**.
+<table>
+<tr>
+<td width="50%"><b>📋 Attendance</b><br><sub>Log hours per person with credit / deduction modes, daily summary and records by date</sub></td>
+<td width="50%"><b>🏆 Hours ranking</b><br><sub>Leaderboard of net hours, all-time or monthly view, medals for the top three</sub></td>
+</tr>
+<tr>
+<td width="50%"><b>📝 Assessments</b><br><sub>Exam scores with exam name, item and score, with automatic averages</sub></td>
+<td width="50%"><b>⚠️ Violations</b><br><sub>Misconduct records that automatically deduct hours from rankings and rates</sub></td>
+</tr>
+<tr>
+<td width="50%"><b>📊 Analytics</b><br><sub>Monthly attendance rate and average scores, progress bars, one-click CSV export</sub></td>
+<td width="50%"><b>📜 Operation logs</b><br><sub>Every add/delete recorded with timestamp, detail and operator IP, filterable by category</sub></td>
+</tr>
+<tr>
+<td width="50%"><b>👥 Members</b><br><sub>Roster, cohort grouping, email maintenance, enable / disable</sub></td>
+<td width="50%"><b>📧 Email digests</b><br><sub>Scheduled or one-click personal monthly reports, scoped by cohort or selection</sub></td>
+</tr>
+</table>
+
+---
+
+## 📸 Screenshots
+
+**📋 Attendance** — log hours per person with a live daily summary
+
+![Attendance](docs/images/attendance-desktop.png)
+
+<table>
+<tr>
+<td align="center"><img src="docs/images/ranking-desktop.png" alt="Hours ranking page with leaderboard and monthly plan panel" width="480"><br><sub><b>🏆 Hours ranking</b></sub></td>
+<td align="center"><img src="docs/images/assessment-desktop.png" alt="Assessment page with exam and violation tabs" width="480"><br><sub><b>📝 Assessments & violations</b></sub></td>
+</tr>
+</table>
+
+**📊 Analytics** — monthly attendance rate and scores with CSV export
+
+![Analytics](docs/images/analytics-desktop.png)
+
+<details>
+<summary><b>📱 Mobile UI</b> (click to expand)</summary>
+
+<br>
+
+<table>
+<tr>
+<td align="center"><img src="docs/images/attendance-mobile.png" alt="Attendance screen on a phone" width="260"><br><sub>Mobile · Attendance</sub></td>
+<td align="center"><img src="docs/images/analytics-mobile.png" alt="Analytics screen on a phone" width="260"><br><sub>Mobile · Analytics</sub></td>
+<td align="center"><img src="docs/images/login-mobile.png" alt="Login screen on a phone" width="260"><br><sub>Mobile · Login</sub></td>
+</tr>
+</table>
+
+</details>
+
+---
+
+## 🚀 Quick Start
+
+**Requirements**: Python 3.10+ and Node.js 18+.
 
 On Windows, double-click `start.bat` or run:
 
@@ -77,11 +150,13 @@ Dependencies are installed automatically on first run. Then open:
 | http://127.0.0.1:5173 | Web UI |
 | http://127.0.0.1:8000/docs | Backend API docs (Swagger) |
 
-Press `Ctrl+C` to stop both services.
+Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop both services.
 
-> 🔑 The initial access password is `2006` — change it right after the first login.
+> [!IMPORTANT]
+> The initial access password is `2006`. Change it immediately after the first login via **Change password** in the sidebar.
 
-Manual start:
+<details>
+<summary><b>Manual start</b> (without the start scripts)</summary>
 
 ```bash
 # Backend
@@ -95,9 +170,10 @@ npm install
 npm run dev
 ```
 
-### Demo data
+</details>
 
-To try the UI with fictional data:
+<details>
+<summary><b>Demo data</b> (fictional data to try the UI)</summary>
 
 ```bash
 cd backend
@@ -105,74 +181,159 @@ python seed_demo.py          # seed an empty database
 python seed_demo.py --force  # wipe and re-seed
 ```
 
----
+> [!WARNING]
+> `--force` wipes existing members and all records. Never run it on production data.
 
-## Email Reports
-
-Each member with an email address receives a **personal monthly report** with hours for the month, cumulative totals, violations, exam scores and next month's plan.
-
-- Fill in emails under **Members**
-- Open **Email reports** in the sidebar, configure SMTP (e.g. `smtp.qq.com:465` + authorization code), send a test email first
-- The **Send** tab picks a month and a target scope (everyone / cohort / selected members); optional auto-send on the last day of each month
-- The **History** tab shows every delivery result
-
-> ⚠️ Scheduled sending only runs while the app is running.
+</details>
 
 ---
 
-## Data & Backup
+## 📧 Email Digests
 
-Data lives in `backend/data/attendance.db` (override with the `ATTENDANCE_DB_PATH` environment variable). Stop the service and copy the file to back up.
+Every member with an email address receives a **personal monthly report** — hours for the month, cumulative totals, violations, exam scores and next month's plan.
 
-> ⚠️ While running, use the SQLite `.backup` command, or copy the `-wal` and `-shm` files together with the database.
+1. Fill in emails under **Members**
+2. Open **Email reports** → **SMTP settings** in the sidebar (e.g. `smtp.qq.com:465` + authorization code), send a test email first
+3. The **Send** tab picks a month and scope (everyone / cohort / selected members)
+4. The **History** tab shows every delivery result; auto-send on the last day of each month is optional
 
----
-
-## Production Deployment
-
-A full Nginx + systemd deployment guide (backups, HTTPS, hardening) is in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) (Chinese).
-
----
-
-## Rebranding
-
-1. Replace `frontend/public/assets/logo.svg` with your own logo
-2. Search and replace `RollCall` in `frontend/src/App.jsx` and `frontend/index.html`
-3. The email sender name is configurable in **Email reports → SMTP settings** — no code change needed
+> [!TIP]
+> The sender name (the report's signature) is configurable in SMTP settings — no code change needed.
 
 ---
 
-## Tech Stack
+## 🏗️ Architecture
+
+```mermaid
+flowchart LR
+    B["🌐 Browser<br/>desktop / tablet / mobile"] -->|HTTP| N["Nginx<br/>80 / 443"]
+    N -->|static assets| F["frontend/dist"]
+    N -->|/api reverse proxy| U["FastAPI + Uvicorn<br/>127.0.0.1:8000"]
+    U --> S[("SQLite<br/>attendance.db")]
+    U --> M["📮 SMTP<br/>monthly report emails"]
+```
 
 | Layer | Tech |
 |:---|:---|
 | Frontend | React + Vite + Lucide Icons |
 | Backend | FastAPI + Uvicorn |
-| Database | SQLite (local file) |
+| Database | SQLite (local file, WAL mode) |
 | Auth | PBKDF2-SHA256 + session tokens |
+
+Production deployment (Nginx + systemd + backups + HTTPS): **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)** (Chinese).
 
 ---
 
-## Development
+## 🛠️ Configuration
+
+| Setting | Default | Description |
+|:---|:---|:---|
+| `ATTENDANCE_DB_PATH` | `backend/data/attendance.db` | Database file path (env variable) |
+| Access password | `2006` | Change it in the UI after first login |
+| Frontend port | `5173` | Vite dev server |
+| Backend port | `8000` | FastAPI / Uvicorn |
+
+<details>
+<summary><b>💾 Backup</b></summary>
+
+<br>
+
+Data lives in `backend/data/attendance.db`. Stop the service and copy the file to back up.
+
+> [!WARNING]
+> While running, use the SQLite `.backup` command or copy the `-wal` and `-shm` files together with the database, or recent writes may be lost.
 
 ```bash
-# Backend tests
-cd backend
-pip install -r requirements-dev.txt
-python -m pytest
+sqlite3 backend/data/attendance.db ".backup backup-$(date +%F).db"
+```
 
-# Frontend build
-cd frontend
-npm run build
+</details>
 
-# Visual check (uses local Chrome, writes screenshots to docs/images)
-npm run visual-check
+---
+
+## 🎨 Rebranding
+
+1. Replace `frontend/public/assets/logo.svg` with your own logo
+2. Search and replace `RollCall` in `frontend/src/App.jsx` and `frontend/index.html`
+3. The email sender name is configurable in **Email reports → SMTP settings**
+
+---
+
+## 🗺️ Roadmap
+
+- [x] Attendance / ranking / assessments / violations / analytics / logs
+- [x] Email digests (manual + monthly auto-send)
+- [x] Cohort grouping and scoped sending
+- [ ] Multi-user roles and permissions
+- [ ] One-click Docker deployment
+- [ ] UI internationalization (i18n)
+- [ ] Richer data import / export
+
+Feature requests welcome in the Issues.
+
+---
+
+## ❓ FAQ
+
+<details>
+<summary><b>What is the default password?</b></summary>
+
+<br>
+
+`2006` — change it via **Change password** in the sidebar after logging in. Passwords are stored as salted PBKDF2-SHA256 hashes.
+
+</details>
+
+<details>
+<summary><b>Does it need internet or payment?</b></summary>
+
+<br>
+
+No. It is completely free and works offline — everything is stored in a local SQLite file and runs fine on intranets. Only the email feature needs access to your SMTP server.
+
+</details>
+
+<details>
+<summary><b>Can I use it on a phone?</b></summary>
+
+<br>
+
+Yes — the UI is fully adapted for phones (bottom navigation bar). Deploy it to a server (see [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)) and open it in any mobile browser.
+
+</details>
+
+<details>
+<summary><b>Where is my data and is it safe?</b></summary>
+
+<br>
+
+In `backend/data/attendance.db`, easy to copy and back up. Authentication is a shared access password plus session tokens — a simple model that fits small teams; per-user roles are on the roadmap.
+
+</details>
+
+---
+
+## 🤝 Contributing
+
+Issues and pull requests are welcome! For larger changes, please open an issue first to discuss the approach.
+
+```bash
+# Dev checks
+cd backend && python -m pytest        # backend tests
+cd frontend && npm run build          # frontend build
+cd frontend && npm run visual-check   # visual check (generates screenshots)
 ```
 
 ---
 
-## License
+## 📄 License
 
 Released under the [MIT License](LICENSE).
 
-Issues and pull requests are welcome.
+<div align="center">
+
+**If this project helps you, please give it a ⭐ Star**
+
+<a href="#readme-top">Back to top ⬆</a>
+
+</div>
