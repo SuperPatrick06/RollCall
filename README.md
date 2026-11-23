@@ -367,6 +367,18 @@ sqlite3 backend/data/attendance.db ".backup backup-$(date +%F).db"
 
 ---
 
+## ⭐ Star History
+
+<p align="center">
+  <a href="https://star-history.com/#SuperPatrick06/RollCall&Date">
+    <img src="https://api.star-history.com/svg?repos=SuperPatrick06/RollCall&type=Date" alt="RollCall Star History chart" width="640">
+  </a>
+</p>
+
+如果 RollCall 对你有帮助，欢迎点一个 ⭐ Star，让它被更多人看到！
+
+---
+
 ## ❓ 常见问题
 
 <details>

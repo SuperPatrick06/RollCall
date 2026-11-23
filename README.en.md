@@ -358,6 +358,18 @@ Feature requests welcome in the Issues.
 
 ---
 
+## ⭐ Star History
+
+<p align="center">
+  <a href="https://star-history.com/#SuperPatrick06/RollCall&Date">
+    <img src="https://api.star-history.com/svg?repos=SuperPatrick06/RollCall&type=Date" alt="RollCall Star History chart" width="640">
+  </a>
+</p>
+
+If RollCall helps you, please give it a ⭐ Star so more people can find it!
+
+---
+
 ## ❓ FAQ
 
 <details>
