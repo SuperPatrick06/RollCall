@@ -66,16 +66,18 @@
 
 <table>
 <tr>
-<td align="center" width="25%" valign="top"><b>🧩 开箱即用</b><br><sub>一键启动脚本<br>无需安装数据库</sub></td>
-<td align="center" width="25%" valign="top"><b>🕒 时长导向</b><br><sub>累计 / 扣除 / 排行<br>出勤率自动计算</sub></td>
-<td align="center" width="25%" valign="top"><b>🔒 数据自持</b><br><sub>自托管部署<br>数据留在自己手里</sub></td>
-<td align="center" width="25%" valign="top"><b>📱 多端适配</b><br><sub>桌面 / 平板 / 手机<br>浏览器直接使用</sub></td>
+<td width="50%" valign="top"><b>🧩 开箱即用</b> — 一键启动脚本，SQLite 本地存储，无需安装数据库服务</td>
+<td width="50%" valign="top"><b>🕒 时长导向</b> — 围绕出勤时长建模，累计 / 扣除 / 排行 / 出勤率一体</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><b>🔒 数据自持</b> — 自托管部署，数据留在自己手里，内网环境也能跑</td>
+<td width="50%" valign="top"><b>📱 多端适配</b> — 桌面 / 平板 / 手机自适应，浏览器直接使用</td>
 </tr>
 </table>
 
 <br>
 
-| | 纸质 / Excel 签到 | 云端考勤 SaaS | **✅ RollCall** |
+| 对比维度 | 纸质 / Excel 签到 | 云端考勤 SaaS | **✅ RollCall** |
 |:---|:---:|:---:|:---:|
 | 费用 | 免费 | 按人 / 月付费 | ✅ 免费开源 |
 | 部署方式 | — | 依赖厂商 | ✅ 自托管 / 内网 |
@@ -362,18 +364,6 @@ sqlite3 backend/data/attendance.db ".backup backup-$(date +%F).db"
 - [ ] 数据导入 / 导出增强
 
 欢迎在 Issue 中提出你想要的功能。
-
----
-
-## ⭐ Star History
-
-<p align="center">
-  <a href="https://star-history.com/#SuperPatrick06/RollCall&Date">
-    <img src="https://star-history.com/svg?repos=SuperPatrick06/RollCall&type=Date" alt="RollCall Star History chart" width="640">
-  </a>
-</p>
-
-如果 RollCall 对你有帮助，欢迎点一个 ⭐ Star，让它被更多人看到！
 
 ---
 

@@ -66,16 +66,18 @@ An open-source attendance system for clubs, student organizations, volunteer cor
 
 <table>
 <tr>
-<td align="center" width="25%" valign="top"><b>🧩 Zero setup</b><br><sub>One-click start<br>No database server</sub></td>
-<td align="center" width="25%" valign="top"><b>🕒 Hours-first</b><br><sub>Credit / deduct / rank<br>Auto attendance rate</sub></td>
-<td align="center" width="25%" valign="top"><b>🔒 Your data</b><br><sub>Self-hosted<br>Works on intranets</sub></td>
-<td align="center" width="25%" valign="top"><b>📱 Responsive</b><br><sub>Desktop / tablet / mobile<br>Any mobile browser</sub></td>
+<td width="50%" valign="top"><b>🧩 Zero setup</b> — one-click start scripts and local SQLite, no database server required</td>
+<td width="50%" valign="top"><b>🕒 Hours-first</b> — modeled around attended hours: accumulate, deduct, rank and compute rates</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><b>🔒 Your data</b> — self-hosted, data stays with you, works on intranets too</td>
+<td width="50%" valign="top"><b>📱 Responsive</b> — desktop / tablet / mobile layouts, use it from any browser</td>
 </tr>
 </table>
 
 <br>
 
-| | Paper / Excel | Cloud attendance SaaS | **✅ RollCall** |
+| Comparison | Paper / Excel | Cloud attendance SaaS | **✅ RollCall** |
 |:---|:---:|:---:|:---:|
 | Cost | Free | Per user / month | ✅ Free & open source |
 | Hosting | — | Vendor-bound | ✅ Self-hosted / intranet |
@@ -353,18 +355,6 @@ sqlite3 backend/data/attendance.db ".backup backup-$(date +%F).db"
 - [ ] Richer data import / export
 
 Feature requests welcome in the Issues.
-
----
-
-## ⭐ Star History
-
-<p align="center">
-  <a href="https://star-history.com/#SuperPatrick06/RollCall&Date">
-    <img src="https://star-history.com/svg?repos=SuperPatrick06/RollCall&type=Date" alt="RollCall Star History chart" width="640">
-  </a>
-</p>
-
-If RollCall helps you, please give it a ⭐ Star so more people can find it!
 
 ---
 
